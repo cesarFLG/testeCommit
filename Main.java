@@ -151,6 +151,138 @@ public class Main {
                     ultimoTotalPedido = totalComDesconto;
                     break;
 
+<<<<<<< HEAD
+=======
+                case 2:
+                    System.out.println("\nCONSULTAR CARDAPIO POR CATEGORIA");
+                    System.out.println("  1 - Lanches");
+                    System.out.println("  2 - Acompanhamentos");
+                    System.out.println("  3 - Bebidas");
+                    System.out.println("  0 - Voltar");
+
+                    int categoria = -1;
+                    boolean entradaValida = false;
+
+                    while (!entradaValida) {
+                        System.out.print("  Escolha uma categoria: ");
+
+                        if (scanner.hasNextInt()) {
+                            categoria = scanner.nextInt();
+                            scanner.nextLine();
+
+                            if (categoria >= 0 && categoria <= 3) {
+                                entradaValida = true;
+                            } else {
+                                System.out.println("   Opcao invalida! Digite 0, 1, 2 ou 3.");
+                            }
+                        } else {
+                            System.out.println("   Entrada invalida! Digite um numero.");
+                            scanner.nextLine();
+                        }
+                    }
+
+                    if (categoria == 0) {
+                        break;
+                    }
+
+                    switch (categoria) {
+                        case 1:
+                            System.out.println("\n--- LANCHES ---");
+                            break;
+                        case 2:
+                            System.out.println("\n--- ACOMPANHAMENTOS ---");
+                            break;
+                        case 3:
+                            System.out.println("\n--- BEBIDAS ---");
+                            break;
+                    }
+
+                    for (int i = 0; i < totalItens; i++) {
+                        if (categorias[i] == categoria) {
+                            System.out.printf("  %d. %s - R$ %.2f%n",
+                                    codigos[i], nomes[i], precos[i]);
+                        }
+                    }
+                    break;
+
+                    //testando um commit 2
+                //okasmdlamsdlamsdlakmsd
+                //jhsjaf
+                case 3:
+                    System.out.println("\nCALCULAR TROCO");
+
+                    if (ultimoTotalPedido <= 0) {
+                        System.out.println("   Nenhum pedido registrado!");
+                        System.out.println("  Faca um pedido primeiro (opcao 1).");
+                        break;
+                    }
+
+                    System.out.printf("   Valor do pedido: R$ %.2f%n", ultimoTotalPedido);
+                    System.out.println("  Digite 0 para cancelar a operacao.\n");
+
+                    double valorPago;
+                    double troco;
+
+                    while (true) {
+                        System.out.print("   Digite o valor pago: R$ ");
+
+                        if (scanner.hasNextDouble()) {
+                            valorPago = scanner.nextDouble();
+                            scanner.nextLine();
+
+                            if (valorPago == 0) {
+                                System.out.println("\n  Operacao cancelada. Voltando ao menu...");
+                                break;
+                            } else if (valorPago < ultimoTotalPedido) {
+                                double falta = ultimoTotalPedido - valorPago;
+                                System.out.printf("\n   Valor insuficiente! Faltam R$ %.2f%n", falta);
+                                System.out.println("  Tente novamente!\n");
+                            } else if (valorPago == ultimoTotalPedido) {
+                                System.out.println("\n   Pedido pago no valor exato! Nao ha troco.");
+                                break;
+                            } else {
+                                troco = valorPago - ultimoTotalPedido;
+                                System.out.printf("\n   Troco: R$ %.2f%n", troco);
+                                break;
+                            }
+                        } else {
+                            String entrada = scanner.nextLine();
+                            if (entrada.equalsIgnoreCase("sair")) {
+                                System.out.println("\n  Operacao cancelada. Voltando ao menu...");
+                                break;
+                            } else {
+                                System.out.println("   Entrada invalida! Digite um numero ou 'sair'.\n");
+                            }
+                        }
+                    }
+                    break;
+
+                case 4:
+                    System.out.println("\nSORTEIO DO DIA");
+
+                    produtoSorteadoIndice = (int) (Math.random() * totalItens);
+                    nomeProdutoSorteado = nomes[produtoSorteadoIndice];
+                    double precoSorteado = precos[produtoSorteadoIndice];
+                    valorDesconto = precoSorteado * 0.20;
+
+                    double precoComDesconto = precoSorteado - valorDesconto;
+
+                    System.out.println("   PRODUTO SORTEADO DO DIA!");
+                    System.out.printf("  Produto: %s%n", nomeProdutoSorteado);
+                    System.out.printf("  Preco original:    R$ %.2f%n", precoSorteado);
+                    System.out.printf("  Desconto de 20%%:  -R$ %.2f%n", valorDesconto);
+                    System.out.printf("  Preco com desconto: R$ %.2f%n", precoComDesconto);
+                    System.out.println("\n   Esse desconto sera aplicado no seu proximo pedido!");
+                    break;
+
+                case 0:
+                    System.out.println("\nEncerrando o sistema. Volte sempre!");
+                    break;
+
+                default:
+                    System.out.println("\nOpcao invalida! Tente novamente.");
+            }
+>>>>>>> 80526e6 (codigo de verdade aqui)
 
         } while (opcao != 0);
 

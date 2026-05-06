@@ -208,8 +208,10 @@ public class Main {
                     //testando um commit 2
                 //okasmdlamsdlamsdlakmsd
                 //jhsjaf
+
                 case 3:
-                    System.out.println("\nCALCULAR TROCO");
+                    System.out.println("\nCALCULAR TROCO")
+                            
 
                     if (ultimoTotalPedido <= 0) {
                         System.out.println("   Nenhum pedido registrado!");

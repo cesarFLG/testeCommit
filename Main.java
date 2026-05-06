@@ -276,62 +276,26 @@ public class Main {
 
 //case 4
 
+                System.out.println("\nSORTEIO DO DIA");
 
+                produtoSorteadoIndice = (int) (Math.random() * totalItens);
+                nomeProdutoSorteado = nomes[produtoSorteadoIndice];
+                double precoSorteado = precos[produtoSorteadoIndice];
+                valorDesconto = precoSorteado * 0.20;
 
+                System.out.println(" PRODUTO SORTEADO DO DIA! ");
+                System.out.printf("  Produto: %s%n", nomeProdutoSorteado);
+                System.out.printf("  Preço original: R$ %.2f%n", precoSorteado);
+                System.out.printf("  Desconto de 20%%: -R$ %.2f%n", valorDesconto);
+                System.out.println("\n  Esse desconto será aplicado no seu próximo pedido!");
+                break;
 
+                case 0:
+                    System.out.println("\nEncerrando o sistema. Volte sempre!");
+                    break;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                default:
+                    System.out.println("\nOpção inválida! Tente novamente.");
 
 
         } while (opcao != 0);

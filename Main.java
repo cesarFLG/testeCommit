@@ -222,7 +222,7 @@ public class Main {
                     System.out.printf("   V do pedido: R$ %.2f%n", ultimoTotalPedido);
                     System.out.println("  Digite 0 para cancelar a operacao.\n");
 
-                    double valorPago;
+                    double valorPag
                     double troco;
 
                     while (true) {

@@ -123,6 +123,7 @@ public class Main {
                         valorDesconto = 0;
                     }
 
+                    
                     double totalComDesconto = total - descontoAplicado;
                     if (totalComDesconto < 0) {
                         totalComDesconto = 0;

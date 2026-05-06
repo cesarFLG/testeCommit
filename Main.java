@@ -211,7 +211,7 @@ public class Main {
 
                 case 3:
                     System.out.println("\nCALCULAR TROCO")
-                            
+
 
                     if (ultimoTotalPedido <= 0) {
                         System.out.println("   Nenhum pedido registrado!");
@@ -219,7 +219,7 @@ public class Main {
                         break;
                     }
 
-                    System.out.printf("   Valor do pedido: R$ %.2f%n", ultimoTotalPedido);
+                    System.out.printf("   V do pedido: R$ %.2f%n", ultimoTotalPedido);
                     System.out.println("  Digite 0 para cancelar a operacao.\n");
 
                     double valorPago;

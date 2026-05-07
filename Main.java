@@ -128,7 +128,7 @@ public class Main {
                         totalComDesconto = 0;
                     }
 
-                    System.out.println("\n--- RESUMO DO PEDIDO ---");
+                    System.out.println("\n--- RESUMO DO SEU PEDIDO ---");
                     System.out.println("Cliente: " + nomeCliente);
                     System.out.println("Itens:");
 

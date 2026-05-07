@@ -142,7 +142,7 @@ public class Main {
                         }
                     }
 
-                    System.out.printf("Subtotal: R$ %.2f%n", total);
+                    System.out.printf ("Subtotal: R$ %.2f%n", total);
                     if (descontoAplicado > 0) {
                         System.out.printf("Desconto: -R$ %.2f%n", descontoAplicado);
                     }
@@ -255,40 +255,7 @@ case 3:
                     break;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//case 4
+               case 4
 
                 System.out.println("\nSORTEIO DO DIA");
 

@@ -204,93 +204,55 @@ public class Main {
                     break;
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//case 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+case 3:
+                    System.out.println("\nCALCULAR TROCO")
+
+
+                    if (ultimoTotalPedido <= 0) {
+                        System.out.println("   Nenhum pedido registrado!");
+                        System.out.println("  Faca um pedido primeiro (opcao 1).");
+                        break;
+                    }
+
+                    System.out.printf("   V do pedido: R$ %.2f%n", ultimoTotalPedido);
+                    System.out.println("  Digite 0 para cancelar a operacao.\n");
+
+                    double valorPag
+                    double troco;
+
+                    while (true) {
+                        System.out.print("   Digite o valor pago: R$ ");
+
+                        if (scanner.hasNextDouble()) {
+                            valorPago = scanner.nextDouble();
+                            scanner.nextLine();
+
+                            if (valorPago == 0) {
+                                System.out.println("\n  Operacao cancelada. Voltando ao menu...");
+                                break;
+                            } else if (valorPago < ultimoTotalPedido) {
+                                double falta = ultimoTotalPedido - valorPago;
+                                System.out.printf("\n   Valor insuficiente! Faltam R$ %.2f%n", falta);
+                                System.out.println("  Tente novamente!\n");
+                            } else if (valorPago == ultimoTotalPedido) {
+                                System.out.println("\n   Pedido pago no valor exato! Nao ha troco.");
+                                break;
+                            } else {
+                                troco = valorPago - ultimoTotalPedido;
+                                System.out.printf("\n   Troco: R$ %.2f%n", troco);
+                                break;
+                            }
+                        } else {
+                            String entrada = scanner.nextLine();
+                            if (entrada.equalsIgnoreCase("sair")) {
+                                System.out.println("\n  Operacao cancelada. Voltando ao menu...");
+                                break;
+                            } else {
+                                System.out.println("   Entrada invalida! Digite um numero ou 'sair'.\n");
+                            }
+                        }
+                    }
+                    break;
 
 
 
